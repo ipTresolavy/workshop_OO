@@ -1,23 +1,35 @@
 #ifndef BATERIA_H
 #define BATERIA_H
 
-class Bateria {
-public:
-    Bateria(int mah, int tempoDeCarregamento);
-    ~Bateria();
-    bool carregar(int tempo);
-    bool usar(int tempo);
-    int calculaTempoDeVoo();
+#include <iostream>
+using namespace std;
 
-    int getCarga();
-    int getTempoDeCarregamento();
-    int getMah();
-    bool getUso();
-    bool getCarregavel();
+class Bateria 
+{
+    public:
+        Bateria(int mah, int tempoDeCarregamento);
+        ~Bateria();
+        bool carregar(int tempo);
+        bool usar(int tempo);
+        int calculaTempoDeVoo();
 
-    void setUso(bool uso);
-    void setCarregavel(bool carregavel);
-    void status();
+        int getCarga();
+        int getTempoDeCarregamento();
+        int getMah();
+        bool getUso();
+        bool getCarregavel();
+
+        void setUso(bool uso);
+        void setCarregavel(bool carregavel);
+        void status();
+    
+    private:
+        unsigned int cargaTotal;
+        unsigned int tempoTotal;
+
+        unsigned int carga = 0U;
+        bool uso = false;
+        bool carregavel = true;
 };
 
 #endif
