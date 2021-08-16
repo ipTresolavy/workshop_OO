@@ -3,7 +3,6 @@ build/
 cmake/
 
 src/exec
-src/objectPaths.txt
 
 src/drone/*.o
 src/functions/*.o

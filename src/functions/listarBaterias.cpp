@@ -1,4 +1,4 @@
-#include "../functionPrototypes_and_vectors.hpp"
+#include "../functionPrototypes.hpp"
 
 void listarBaterias(void)
 {
