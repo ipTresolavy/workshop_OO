@@ -1,10 +1,12 @@
-#include "../functionPrototypes_and_vectors.h"
+#include "../functionPrototypes_and_vectors.hpp"
 
 void usarDrone(int drone)
 {
     unsigned int choice;
     static double position;
     static double height;
+
+    extern vector<Drone*> *drones;
 
     cout << "\n\t1. Decolar" << "\n";
     cout << "\t2. Ir para uma posição" << "\n";

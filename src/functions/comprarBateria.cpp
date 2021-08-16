@@ -1,9 +1,10 @@
-#include "../functionPrototypes_and_vectors.h"
+#include "../functionPrototypes_and_vectors.hpp"
 
 bool comprarBateria(void)
 {
     int carga;
     int tempoDeCarregamento;
+    extern vector<Bateria*> *baterias;
 
     cout << "\nDigite a carga da bateria (mAh): ";
     cin >> carga;

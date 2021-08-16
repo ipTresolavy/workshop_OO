@@ -1,8 +1,11 @@
-#include "../functionPrototypes_and_vectors.h"
+#include "../functionPrototypes_and_vectors.hpp"
+
 
 void carregarBateria(void)
 {
     unsigned int duration;
+    extern vector<Bateria*> *baterias;
+
     cout << "\nInsira a duração de tempo durante a qual desejas carregas as baterias (horas): ";
     cin >> duration;
 

@@ -38,7 +38,7 @@ bool Bateria::usar(int tempo)
 
 int Bateria::calculaTempoDeVoo()
 {
-    return ((this->tempoTotal)*((this->carga)/(this->cargaTotal)));
+    return ((this->tempoTotal)*(this->carga))/(this->cargaTotal);
 }
 
 int Bateria::getCarga()

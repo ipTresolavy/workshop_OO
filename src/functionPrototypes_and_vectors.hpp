@@ -1,5 +1,5 @@
-#ifndef VECTORS_AND_FUNCTIONS
-#define VECTORS_AND_FUNCTIONS
+#ifndef FUNCTIONS
+#define FUNCTIONS
 
 #include "drone/Bateria.hpp"
 #include "drone/Drone.hpp"
@@ -17,8 +17,5 @@ void usarDrone(int drone);
 void carregarBateria(void);
 void listarDrones(void);
 void listarBaterias(void);
-
-vector<Bateria*> *baterias = new vector<Bateria*>();
-vector<Drone*> *drones = new vector<Drone*>();
 
 #endif

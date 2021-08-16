@@ -1,12 +1,13 @@
-#include "../functionPrototypes_and_vectors.h"
-
-
+#include "../functionPrototypes_and_vectors.hpp"
 
 void montarDroneGenerico(void)
 {
     string nome;
     double pos;
     int batteryChoice;
+
+    extern vector<Bateria*> *baterias;
+    extern vector<Drone*> *drones;
 
     if(!(baterias->empty()))
     {

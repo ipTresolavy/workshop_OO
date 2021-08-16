@@ -1,4 +1,4 @@
-#include "functionPrototypes_and_vectors.h"
+#include "functionPrototypes_and_vectors.hpp"
 #include "drone/Bateria.hpp"
 #include "drone/Drone.hpp"
 #include "drone/S1000.hpp"
@@ -7,6 +7,9 @@
 #include <vector>
 
 using namespace std;
+
+vector<Bateria*> *baterias = new vector<Bateria*>();
+vector<Drone*> *drones = new vector<Drone*>();
 
 int main()
 {
@@ -61,7 +64,7 @@ int main()
 
     if(choice != 8)
         main();
-    
+
     return 0;
 }
 

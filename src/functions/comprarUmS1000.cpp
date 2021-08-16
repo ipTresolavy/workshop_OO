@@ -1,8 +1,10 @@
-#include "../functionPrototypes_and_vectors.h"
+#include "../functionPrototypes_and_vectors.hpp"
 
 void comprarUmS1000(void)
 {
     double pos;
+    extern vector<Bateria*> *baterias;
+    extern vector<Drone*> *drones;
 
     cout << "\nInsira a posição inicial do S1000: ";
     cin >> pos;
