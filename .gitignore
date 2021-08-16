@@ -1,5 +1,13 @@
 build/
+
 cmake/
+
+src/exec
+src/classesPaths.txt
+
+src/drone/*.o
+src/functions/*.o
+
 __pycache__
 .pytest_cache
 

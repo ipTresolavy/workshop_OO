@@ -20,13 +20,14 @@ bool Bateria::carregar(int tempo)
         return true;
     }
     else
-        return false;
+        cout << "Carga já está no máximo" << endl;
+    return false;
 }
 
 bool Bateria::usar(int tempo)
 {
 
-    if(getCarga() > 0 && (carga = (carga) - (cargaTotal*tempo)/(tempoTotal)) >= 0U) 
+    if(getCarga() > 0 && (carga = (carga) - (cargaTotal*tempo)/(tempoTotal)) > 0U) 
         return true;
     else
     {

@@ -1,52 +1,69 @@
+#include "functionPrototypes_and_vectors.h"
 #include "drone/Bateria.hpp"
 #include "drone/Drone.hpp"
 #include "drone/S1000.hpp"
 #include <iostream>
 #include <stdio.h>
 #include <vector>
+
 using namespace std;
-
-enum choices{one = 1, two, three, four, five, six, seven, eight}choice;
-
-vector<Bateria*> *baterias = new vector<Bateria*>();
-
-void comprarBateria(int mah, int tempoDeCarregamento);
 
 int main()
 {
-    cout << "\t1. Comprar bateria" << "\n";
+    unsigned short choice;
+
+    cout << "\n\t1. Comprar bateria" << "\n";
     cout << "\t2. Comprar um S1000" << "\n";
     cout << "\t3. Montar um drone genérico" << "\n";
     cout << "\t4. Usar os drones existentes" << "\n";
     cout << "\t5. Carregar baterias disponíveis" << "\n";
     cout << "\t6. Listar drones existentes" << "\n";
     cout << "\t7. Listar baterias existentes" << "\n";
-    cout << "\t8. Sair" << endl;
-
-    scanf("%d", (int*)choice);
+    cout << "\t8. Sair" << "\n";
+    cout << "Escolha uma opção: ";
+    cin >> choice;
+    cout << endl;
 
     switch(choice)
     {
-        case one:
+        case 1:
+            comprarBateria();           
             break;
-        case two:
+        case 2:
+            comprarUmS1000();
             break;
-        case three:
+        case 3:
+            montarDroneGenerico();
             break;
-        case four:
+        case 4:
+            listarDrones();
+            cout << "\nEscolha um dos drones existentes listados acima: ";
+            cin >> choice;
+            if(((drones->at(choice-1))->getBateria())->getCarga() != 0)
+                usarDrone(choice);
+            else
+                cout << "\nA bateria deste drone ainda não foi carregada!" << endl;
+            choice = 0; //prevents accidental exit
             break;
-        case five:
+        case 5:
+            carregarBateria();
             break;
-        case six:
+        case 6:
+            listarDrones();
             break;
-        case seven:
+        case 7:
+            listarBaterias();
             break;
-        case eight:
+        case 8:
+            cout << "\nSaindo..." << endl;
             break;
     }
 
-    if(choice != eight)
+    if(choice != 8)
         main();
     
     return 0;
 }
+
+
+

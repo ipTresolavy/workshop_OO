@@ -53,7 +53,7 @@ void Drone::land()
 
 bool Drone::mapear()
 {
-    cout << "O " << this->nome << " não consegue mapear" << endl;
+    cout << "\nO " << this->nome << " não consegue mapear" << endl;
     return false;
 }
 
